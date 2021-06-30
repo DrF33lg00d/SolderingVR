@@ -3,7 +3,17 @@ guid: 9355a20c33dd4a2479b831ec41eb23ad
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plastic Bk.002
+    second: {fileID: 2100000, guid: 161ec2f7314ad1946a379049ebdf4094, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: silver pins.004
+    second: {fileID: 2100000, guid: 4f82be22b1c10e6468e6618084d4bcaf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

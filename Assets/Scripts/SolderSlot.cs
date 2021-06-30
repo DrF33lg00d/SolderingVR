@@ -7,8 +7,7 @@ public class SolderSlot : MonoBehaviour
 {
     private SolderingIron iron = null;
     private bool isSolder = false;
-    private float timer;
-    
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "soldering_iron") iron = other.gameObject.GetComponent<SolderingIron>();
@@ -45,11 +44,9 @@ public class SolderSlot : MonoBehaviour
             if (iron.isTinned && transform.childCount == 0 && index_component >= 0)
             {
                 Transform comp = transform.parent.GetChild(index_component);
-                timer += Time.deltaTime;
 
-                if (timer > 1 && transform.childCount == 0){
+                if (transform.childCount == 0){
                     iron.CreateSolderPoint(transform);
-                    timer = 0;
 
                     comp.GetComponent<ComponentItem>().isSoldered = true;
                     GameObject manager = GameObject.Find("GameManager");

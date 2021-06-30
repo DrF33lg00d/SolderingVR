@@ -91,7 +91,7 @@ public class WireComponent : MonoBehaviour
                 w2.velocity = Vector3.zero;
                 w2.isKinematic = true;
                 
-                GameObject.Find("soldering_iron").GetComponent<SolderingIron>().CreateSolderPoint(transform);
+                GameObject.Find("soldering_iron").GetComponent<SolderingIron>().CreateSolderPoint(transform, true);
                 if (transform.childCount == 2)
                 {
                     GameManager2 gm = GameObject.Find("GameManager").GetComponent<GameManager2>();
