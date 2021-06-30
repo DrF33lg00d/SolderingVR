@@ -49,12 +49,18 @@ public class SolderingIron : MonoBehaviour
     
     
     
-    public void CreateSolderPoint()
+    public void CreateSolderPoint(Transform parent = null)
     {
         GameObject s = Instantiate(solderPoint, ironEnd);
-        s.transform.SetParent(transform);
+        if (parent == transform)
+        {
+            s.transform.SetParent(transform);
+            solderPoints.Add(s);
+        }
+        else s.transform.SetParent(parent);
+        
         s.transform.localScale += s.transform.localScale;
-        solderPoints.Add(s);
+        
         //     countTries++;
     }
 

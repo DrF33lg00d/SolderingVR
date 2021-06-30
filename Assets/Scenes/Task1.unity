@@ -961,30 +961,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 663437729412313648, guid: 8e00b2c550e6f734aa59783f57aa78bb, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.0003
-      objectReference: {fileID: 0}
-    - target: {fileID: 663437729412313648, guid: 8e00b2c550e6f734aa59783f57aa78bb, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.0003
-      objectReference: {fileID: 0}
-    - target: {fileID: 663437729412313648, guid: 8e00b2c550e6f734aa59783f57aa78bb, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.04700005
-      objectReference: {fileID: 0}
-    - target: {fileID: 663437729412313648, guid: 8e00b2c550e6f734aa59783f57aa78bb, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.165
-      objectReference: {fileID: 0}
-    - target: {fileID: 663437729568235307, guid: 8e00b2c550e6f734aa59783f57aa78bb, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 663437729921048974, guid: 8e00b2c550e6f734aa59783f57aa78bb, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 663437730256031181, guid: 8e00b2c550e6f734aa59783f57aa78bb, type: 3}
       propertyPath: m_Name
       value: TutorialMenu
@@ -1081,14 +1057,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 682079786}
-    - target: {fileID: 663437730826076076, guid: 8e00b2c550e6f734aa59783f57aa78bb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Restart
-      objectReference: {fileID: 0}
-    - target: {fileID: 663437730826076076, guid: 8e00b2c550e6f734aa59783f57aa78bb, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameManager1, Assembly-CSharp
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e00b2c550e6f734aa59783f57aa78bb, type: 3}
 --- !u!1001 &2212044549655567705
@@ -1402,22 +1370,42 @@ PrefabInstance:
     - target: {fileID: 90654275, guid: 84f5bdbcae9f93d43808d23afa97d08d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 682079786}
+    - target: {fileID: 90654275, guid: 84f5bdbcae9f93d43808d23afa97d08d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Confirm
       objectReference: {fileID: 0}
     - target: {fileID: 252929908, guid: 84f5bdbcae9f93d43808d23afa97d08d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 682079786}
+    - target: {fileID: 252929908, guid: 84f5bdbcae9f93d43808d23afa97d08d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenThirdScene
       objectReference: {fileID: 0}
     - target: {fileID: 584419085, guid: 84f5bdbcae9f93d43808d23afa97d08d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 682079786}
+    - target: {fileID: 584419085, guid: 84f5bdbcae9f93d43808d23afa97d08d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitFromApp
       objectReference: {fileID: 0}
     - target: {fileID: 640940449, guid: 84f5bdbcae9f93d43808d23afa97d08d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 682079786}
+    - target: {fileID: 640940449, guid: 84f5bdbcae9f93d43808d23afa97d08d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenSecondScene
       objectReference: {fileID: 0}
     - target: {fileID: 1360253882, guid: 84f5bdbcae9f93d43808d23afa97d08d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 682079786}
+    - target: {fileID: 1360253882, guid: 84f5bdbcae9f93d43808d23afa97d08d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFirstScene
       objectReference: {fileID: 0}
     - target: {fileID: 1635838549, guid: 84f5bdbcae9f93d43808d23afa97d08d, type: 3}
       propertyPath: m_Camera

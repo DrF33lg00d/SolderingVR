@@ -67,7 +67,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 8ed60eacc72bc4a4c854f54e011a2f96, type: 2}
-  - {fileID: 2100000, guid: 73ca3de3bf989d34fb2d847f18a1868d, type: 2}
+  - {fileID: 2100000, guid: 417cfa39f66489e4c8cd45a3e4b268ad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -160,7 +160,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 8811028839909141182}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -265,3 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953ab9a10ce61f742a3db10ff74271c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wireRosin: {fileID: 2100000, guid: 73ca3de3bf989d34fb2d847f18a1868d, type: 2}
+  wireClear: {fileID: 2100000, guid: 73ca3de3bf989d34fb2d847f18a1868d, type: 2}
+  wireSolder: {fileID: 2100000, guid: 154f9a6c41c8c9b45ad00fb3d5d11458, type: 2}
+  neiborWire: {fileID: 0}

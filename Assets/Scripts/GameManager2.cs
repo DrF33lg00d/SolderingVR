@@ -7,20 +7,40 @@ using UnityEngine.UI;
 public class GameManager2 : GameManager
 {
     public GameObject iron;
+
+    private int countToComplete = 0; 
+    private int countCurrent = 0;
+    
+    
     void Start()
     {
         base.Start();
         Text tutorText = GameObject.Find("TutorialText").GetComponent<Text>();
-        tutorText.text = "1. \n";
+        tutorText.text = "Инструкция пайки красных проводов:\n" +
+                         "1. Возьмите провод одним контроллером и паяльник другим.\n" +
+                         "2. Окуните конец провода в канифоль и коснуться на несколько секунд паяльником\n" +
+                         "3. Положите провод на стол и аккуратно нанесите на конец провода с канифолью припой.\n" +
+                         "4. Повторите 1-2 действия со вторым проводом.\n" +
+                         "5. Положите 2 провода так, чтобы они касались друг друга концами с припоем.\n" +
+                         "После этого проведите паяльником с припоем.\n\n" +
+                         "Повторите действия 1-5 с оставшимися парами проводов." +
+                         "";
         iron = GameObject.Find("soldering_iron");
+        countToComplete = GameObject.FindGameObjectsWithTag("WireGroup").Length;
+        UpdateCompleteText();
+        
     }
 
-    void Update()
+
+    public void AddCompleted(int c = 1)
     {
-        if (iron.GetComponent<SolderingIron>().isTinned && iron.transform.childCount < 2)
-        {
-            SetCompletedText();
-        }
+        countCurrent += c;
+        UpdateCompleteText();
+    }
+    public void UpdateCompleteText()
+    {
+        countText.text = countCurrent + " / " + countToComplete;
+        if (countCurrent == countToComplete) SetCompletedText();
     }
     
     public void SetCompletedText()

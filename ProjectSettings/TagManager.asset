@@ -10,6 +10,7 @@ TagManager:
   - Slot
   - UI_Scene
   - UI_Scene_Modal
+  - WireGroup
   layers:
   - Default
   - TransparentFX
