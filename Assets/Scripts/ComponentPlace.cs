@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ComponentPlace : MonoBehaviour
 {
-
+    public bool isSloted = false;
     public bool isReady = false;
     public List<Collider> slots;
     public int countSlots = 0;
@@ -17,6 +17,12 @@ public class ComponentPlace : MonoBehaviour
     {
         if (!isReady && sample != null)
         {
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                Transform child = transform.GetChild(i);
+                child.gameObject.AddComponent<SolderSlot>();
+            }
+            
             instance = Instantiate(sample, transform);
             instance.transform.localPosition=Vector3.zero;
 

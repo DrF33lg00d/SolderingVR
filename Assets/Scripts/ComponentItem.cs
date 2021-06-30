@@ -69,6 +69,7 @@ public class ComponentItem : MonoBehaviour
             transform.rotation = slot.transform.rotation;
             isSloted = true;
             slot.GetComponent<ComponentPlace>().DeleteProjection();
+            slot.GetComponent<ComponentPlace>().isSloted = true;
          }
       }
       

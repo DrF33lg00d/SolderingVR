@@ -49,7 +49,7 @@ public class SolderingIron : MonoBehaviour
     
     
     
-    public void CreateSolderPoint(Transform parent = null)
+    public void CreateSolderPoint(Transform parent = null, bool scaleUp = false)
     {
         GameObject s = Instantiate(solderPoint, ironEnd);
         if (parent == transform)
@@ -58,25 +58,13 @@ public class SolderingIron : MonoBehaviour
             solderPoints.Add(s);
         }
         else s.transform.SetParent(parent);
-        
-        s.transform.localScale += s.transform.localScale;
+        if (scaleUp) s.transform.localScale += s.transform.localScale;
         
         //     countTries++;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-
-        // if (other.gameObject.name == "cleaner")
-        // {
-        //     
-        //     if (isTinned)
-        //     {
-        //         isTinned = false;
-        //         changeStingMaterial();
-        //     }
-        // }
-
         if (other.gameObject.name == "rosin")
         {
             isConnRosin = true;
@@ -109,36 +97,7 @@ public class SolderingIron : MonoBehaviour
         
         if (other.gameObject.CompareTag("SolderSlot") && isTinned && isConnSolder)
         {
-            Transform place = other.gameObject.transform.parent;
-            int index_component = -1;
-            for (int i=0; i< place.childCount; i++)
-            {
-                if (index_component < 0)
-                {
-                    if (place.GetChild(i).CompareTag("Component")) index_component = i;
-                }
-            }
-
-            if (index_component >= 0)
-            {
-                Transform comp = place.GetChild(index_component);
-                GameObject solderSlot = other.gameObject;
-
-                time_soldering += Time.deltaTime;
-
-                if (time_soldering > 1 && solderSlot.transform.childCount < 1){
-                    
-                    GameObject point = Instantiate(solderPoint, solderSlot.transform);
-                    comp.GetComponent<ComponentItem>().isSoldered = true;
-                    GameObject manager = GameObject.Find("GameManager");
-                    if (manager.GetComponent<GameManager3>())
-                    {
-                        manager.GetComponent<GameManager3>().AddCompleted();
-                    }
-                }
-
-
-            }
+            
         }
     }
 

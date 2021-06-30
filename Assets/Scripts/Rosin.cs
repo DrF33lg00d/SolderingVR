@@ -45,7 +45,7 @@ public class Rosin : MonoBehaviour
                 {
                     solderingIron.isTinned = true;
                     solderingIron.changeStingMaterial();
-                    solderingIron.CreateSolderPoint(solderingIron.transform);
+                    solderingIron.CreateSolderPoint(solderingIron.transform, true);
                     toMuchSolder--;
                 }
                 else if (toMuchSolder == 0)
