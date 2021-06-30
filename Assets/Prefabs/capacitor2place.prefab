@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3366555667700795278
+--- !u!1 &2340076243917389162
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3366555667700795279}
-  - component: {fileID: 3366555667700795264}
+  - component: {fileID: 2340076243917389161}
+  - component: {fileID: 2340076243917389160}
   m_Layer: 0
   m_Name: slot2
   m_TagString: SolderSlot
@@ -17,34 +17,34 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3366555667700795279
+--- !u!4 &2340076243917389161
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3366555667700795278}
+  m_GameObject: {fileID: 2340076243917389162}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.00313, z: 0.0096}
+  m_LocalPosition: {x: 0.00529, y: -0.00133, z: -0.00004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3366555668138690237}
+  m_Father: {fileID: 2340076244772305565}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &3366555667700795264
+--- !u!135 &2340076243917389160
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3366555667700795278}
+  m_GameObject: {fileID: 2340076243917389162}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.0018
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &3366555668138690236
+--- !u!1 &2340076244772305566
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -52,53 +52,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3366555668138690237}
-  - component: {fileID: 3366555668138690238}
-  - component: {fileID: 3366555668138690239}
+  - component: {fileID: 2340076244772305565}
+  - component: {fileID: 2340076244772305564}
+  - component: {fileID: 3308662413374573935}
   m_Layer: 0
-  m_Name: resplace
+  m_Name: capacitor2place
   m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3366555668138690237
+--- !u!4 &2340076244772305565
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3366555668138690236}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: -0.007905, y: -0.00139, z: 0.000316}
-  m_LocalScale: {x: 0.1, y: 0.100000024, z: 0.100000024}
+  m_GameObject: {fileID: 2340076244772305566}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
-  - {fileID: 3366555668523668704}
-  - {fileID: 3366555667700795279}
+  - {fileID: 2340076245408369183}
+  - {fileID: 2340076243917389161}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &3366555668138690238
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3366555668138690236}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.002
-  m_Height: 0.01
-  m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3366555668138690239
+--- !u!114 &2340076244772305564
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3366555668138690236}
+  m_GameObject: {fileID: 2340076244772305566}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 893b631a55c676b40bf3600b5fb43942, type: 3}
@@ -107,7 +93,22 @@ MonoBehaviour:
   isReady: 0
   slots: []
   countSlots: 0
---- !u!1 &3366555668523668719
+  sample: {fileID: 6110322743936085733, guid: 440a6672546938942a8786d163e597ba, type: 3}
+--- !u!136 &3308662413374573935
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2340076244772305566}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.007458506
+  m_Height: 0.018080372
+  m_Direction: 1
+  m_Center: {x: 0.00007565599, y: 0.010959813, z: 9.744094e-11}
+--- !u!1 &2340076245408369176
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,8 +116,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3366555668523668704}
-  - component: {fileID: 3366555668523668705}
+  - component: {fileID: 2340076245408369183}
+  - component: {fileID: 2340076245408369182}
   m_Layer: 0
   m_Name: slot1
   m_TagString: SolderSlot
@@ -124,27 +125,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3366555668523668704
+--- !u!4 &2340076245408369183
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3366555668523668719}
+  m_GameObject: {fileID: 2340076245408369176}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.00313, z: -0.0094}
+  m_LocalPosition: {x: -0.00461, y: -0.00133, z: 0.00014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3366555668138690237}
+  m_Father: {fileID: 2340076244772305565}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &3366555668523668705
+--- !u!135 &2340076245408369182
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3366555668523668719}
+  m_GameObject: {fileID: 2340076245408369176}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1

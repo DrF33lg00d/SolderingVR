@@ -115,6 +115,11 @@ public class SolderingIron : MonoBehaviour
                     GameObject point = Instantiate(solderPoint, solderSlot.transform);
                     // point.transform.SetParent(comp.transform);
                     comp.GetComponent<ComponentItem>().isSoldered = true;
+                    GameObject manager = GameObject.Find("GameManager");
+                    if (manager.GetComponent<GameManager3>())
+                    {
+                        manager.GetComponent<GameManager3>().AddCompleted();
+                    }
                     // component.GetComponent<XRGrabInteractable>().enabled = false;
                     // component.GetComponent<ComponentItem>().isSoldered = true;
                 }

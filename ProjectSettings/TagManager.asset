@@ -8,6 +8,8 @@ TagManager:
   - Resistor
   - SolderSlot
   - Slot
+  - UI_Scene
+  - UI_Scene_Modal
   layers:
   - Default
   - TransparentFX

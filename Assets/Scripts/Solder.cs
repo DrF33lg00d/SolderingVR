@@ -8,19 +8,12 @@ public class Solder : MonoBehaviour
     public float temperatureMelting = 240f;
     public bool isHeating = false;
     public float temperature = 20.0f;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (isHeating)
         {
-            temperature = Mathf.Clamp(temperature + 1, 20, temperatureMelting+10);
+            temperature = Mathf.Clamp(temperature + 2, 20, temperatureMelting+10);
         }
         else
         {

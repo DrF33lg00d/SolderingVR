@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 7276202978718906123}
   - component: {fileID: 7276202978718906118}
   - component: {fileID: 7276202978718906122}
+  - component: {fileID: 2242816918322578354}
   m_Layer: 0
   m_Name: solder
   m_TagString: Untagged
@@ -142,7 +143,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7510647239373539925}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: fcd1281fc6a2eda42b93234e53fbdc41, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.02
@@ -285,6 +286,19 @@ MonoBehaviour:
   temperatureMelting: 235
   isHeating: 0
   temperature: 20
+--- !u!65 &2242816918322578354
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7510647239373539925}
+  m_Material: {fileID: 13400000, guid: fcd1281fc6a2eda42b93234e53fbdc41, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.0128388405, z: 0.02}
+  m_Center: {x: 0, y: 0.005407214, z: 0}
 --- !u!1 &8733001226342411203
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ public class ComponentItem : MonoBehaviour
 
    private void Start()
    {
-      foreach (var c in GetComponents<CapsuleCollider>())
+      foreach (var c in GetComponents<Collider>())
       {
          colls.Add(c);
       }
@@ -67,6 +67,7 @@ public class ComponentItem : MonoBehaviour
             transform.position = slot.transform.position;
             transform.rotation = slot.transform.rotation;
             isSloted = true;
+            slot.GetComponent<ComponentPlace>().DeleteProjection();
          }
       }
       
@@ -82,16 +83,8 @@ public class ComponentItem : MonoBehaviour
 
    private void OnTriggerExit(Collider other)
    {
-      if (transform.childCount > 0)
-      {
-         isSoldered = true;
-      }
-      else if (transform.childCount == 0)
-      {
-         isSoldered = false;
-      }
       
-      if (other.gameObject.CompareTag("Slot") && !isSoldered )
+      if (other.gameObject.CompareTag("Slot") && isSloted )
       {
          GameObject slot = other.gameObject;
 
