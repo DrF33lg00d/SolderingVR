@@ -29,14 +29,21 @@ public class WireComponent : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
-
-        if (other.gameObject.name == "solder") isSolder = true;
         if (other.gameObject.name == "soldering_iron") isIron = true;
         if (other.gameObject.name == "rosin") isRosin = true;
         if (neiborWire)
         {
             if (other.gameObject == neiborWire) isWire = true;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.name == "solder")
+        {
+            Solder s = other.gameObject.GetComponent<Solder>();
+            if (s.temperature >= s.temperatureMelting) isSolder = true;
+            else isSolder = false;
         }
     }
 
