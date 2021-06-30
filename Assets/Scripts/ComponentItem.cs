@@ -13,6 +13,7 @@ public class ComponentItem : MonoBehaviour
    public string nameSlot;
 
    public List<Collider> colls = new List<Collider>();
+   
 
    private void Start()
    {
@@ -74,6 +75,14 @@ public class ComponentItem : MonoBehaviour
       
       // && other.gameObject.name.Contains(nameSlot)
       
+   }
+
+   private void OnTriggerStay(Collider other)
+   {
+      if (other.gameObject.name == "solder")
+      {
+         
+      }
    }
 
    public bool AttachDone()

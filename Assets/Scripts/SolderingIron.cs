@@ -37,28 +37,39 @@ public class SolderingIron : MonoBehaviour
 
     public void Update()
     {
-        if (countTries < 1 && time_tink > 1.5 && isTinned && isConnRosin)
-        {
-            GameObject s = Instantiate(solderPoint, ironEnd);
-            s.transform.SetParent(transform);
-            solderPoints.Add(s);
-            countTries++;
-        }
+        // if (countTries < 1 && time_tink > 1.5 && isTinned && isConnRosin)
+        // {
+        //     GameObject s = Instantiate(solderPoint, ironEnd);
+        //     s.transform.SetParent(transform);
+        //     solderPoints.Add(s);
+        //     countTries++;
+        // }
 
+    }
+    
+    
+    
+    public void CreateSolderPoint()
+    {
+        GameObject s = Instantiate(solderPoint, ironEnd);
+        s.transform.SetParent(transform);
+        s.transform.localScale += s.transform.localScale;
+        solderPoints.Add(s);
+        //     countTries++;
     }
 
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.name == "cleaner")
-        {
-            
-            if (isTinned)
-            {
-                isTinned = false;
-                changeStingMaterial();
-            }
-        }
+        // if (other.gameObject.name == "cleaner")
+        // {
+        //     
+        //     if (isTinned)
+        //     {
+        //         isTinned = false;
+        //         changeStingMaterial();
+        //     }
+        // }
 
         if (other.gameObject.name == "rosin")
         {
@@ -78,17 +89,16 @@ public class SolderingIron : MonoBehaviour
     
     private void OnTriggerStay(Collider other)
     {
-        // connect iron to solder for tinkining
         if (other.gameObject.name == "solder")
         {
             isConnSolder = true;
-            Solder sample = other.gameObject.GetComponent<Solder>();
-            if (sample.isHeating && sample.temperature >= sample.temperatureMelting && !isTinned && isConnRosin)
-            {
-                isTinned = true;
-                changeStingMaterial();
-                time_tink += Time.deltaTime;
-            }
+            // Solder sample = other.gameObject.GetComponent<Solder>();
+            // if (sample.isHeating && sample.temperature >= sample.temperatureMelting && !isTinned && isConnRosin)
+            // {
+            //     isTinned = true;
+            //     changeStingMaterial();
+            //     time_tink += Time.deltaTime;
+            // }
         }
         
         if (other.gameObject.CompareTag("SolderSlot") && isTinned && isConnSolder)
@@ -113,15 +123,12 @@ public class SolderingIron : MonoBehaviour
                 if (time_soldering > 1 && solderSlot.transform.childCount < 1){
                     
                     GameObject point = Instantiate(solderPoint, solderSlot.transform);
-                    // point.transform.SetParent(comp.transform);
                     comp.GetComponent<ComponentItem>().isSoldered = true;
                     GameObject manager = GameObject.Find("GameManager");
                     if (manager.GetComponent<GameManager3>())
                     {
                         manager.GetComponent<GameManager3>().AddCompleted();
                     }
-                    // component.GetComponent<XRGrabInteractable>().enabled = false;
-                    // component.GetComponent<ComponentItem>().isSoldered = true;
                 }
 
 
@@ -164,6 +171,15 @@ public class SolderingIron : MonoBehaviour
         else
             ms[1] = emptySting;
         GetComponent<MeshRenderer>().materials = ms;
+    }
+
+    public void ClearPoints()
+    {
+        foreach (var point in solderPoints)
+        {
+            Destroy(point);
+        }
+        solderPoints.Clear();
     }
     
 }

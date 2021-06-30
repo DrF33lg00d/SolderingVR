@@ -9,7 +9,10 @@ public class Cleaner : MonoBehaviour
     {
         if (other.gameObject.name == "soldering_iron")
         {
-            
+            SolderingIron iron = other.gameObject.GetComponent<SolderingIron>();
+            iron.isTinned = false;
+            iron.changeStingMaterial();
+            iron.ClearPoints();
         }
     }
 }

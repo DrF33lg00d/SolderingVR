@@ -80,10 +80,10 @@ public class GameManager3 : GameManager
     public void UpdateCountText()
     {
         countText.text = Completed + " / " + toCompleted;
-        IsCompleted();
+        SetCompletedText();
     }
 
-    public void IsCompleted()
+    public void SetCompletedText()
     {
         if (Completed == toCompleted)
         {
@@ -97,6 +97,6 @@ public class GameManager3 : GameManager
 
     public void Restart()
     {
-        SceneManager.LoadScene("Scenes/SampleScene");
+        SceneManager.LoadScene("Scenes/Task3");
     }
 }

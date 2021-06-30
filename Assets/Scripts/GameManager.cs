@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     public void OpenFirstScene()
     {
-        sceneName = "Welcome";
+        sceneName = "Task1";
         taskDescription.text = "В этом задании необходимо подготовить\n" +
                                "паяльник для дальнейшей работы с ним.\n" +
                                "Используйте паяльник, колбу с припоем\n" +
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     }
     public void OpenSecondScene()
     {
-        sceneName = "Welcome";
+        sceneName = "Task2";
         taskDescription.text = "В этом задании вам предстоит спаять\n" +
                                "несколько проводов между собой.\n" +
                                "Используйте паяльник, колбу с припоем\n" +
@@ -83,8 +83,7 @@ public class GameManager : MonoBehaviour
 
     public void ExitFromApp()
     {
-        // UnityEditor.EditorApplication.isPlaying = false; // disable when build
+        UnityEditor.EditorApplication.isPlaying = false; // disable when build
         Application.Quit();
-        
     }
 }

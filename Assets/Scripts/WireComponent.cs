@@ -1,13 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class WireComponent : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private int level = 0;
     void Start()
     {
-        
+        level = Int32.Parse(name.Replace("wire", ""));
     }
 
     // Update is called once per frame
