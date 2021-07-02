@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
 
     public void ExitFromApp()
     {
-        UnityEditor.EditorApplication.isPlaying = false; // disable when build
+        // UnityEditor.EditorApplication.isPlaying = false; // disable when build
         Application.Quit();
     }
 }
