@@ -13,7 +13,7 @@ public class ComponentPlace : MonoBehaviour
     public GameObject sample;
 
     private GameObject instance;
-    private void Start()
+    private void Awake()
     {
         if (!isReady && sample != null)
         {

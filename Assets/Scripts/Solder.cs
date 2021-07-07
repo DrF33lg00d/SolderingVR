@@ -17,7 +17,7 @@ public class Solder : MonoBehaviour
         }
         else
         {
-            temperature = Mathf.Clamp(temperature - 0.5f, 20, temperatureMelting);
+            temperature = Mathf.Clamp(temperature - 2f, 20, temperatureMelting);
         }
     }
     

@@ -15,7 +15,7 @@ public class ComponentItem : MonoBehaviour
    public List<Collider> colls = new List<Collider>();
    
 
-   private void Start()
+   private void Awake()
    {
       foreach (var c in GetComponents<Collider>())
       {
